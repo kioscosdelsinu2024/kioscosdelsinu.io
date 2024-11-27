@@ -1,212 +1,587 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Publicidad de Mi Empresa">
-    <link rel="icon" href="logo.jpeg" type="image/x-icon">
-    <title>Kioscos del sinu</title>
-    <link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="icon" href="logo.jpeg" type="image/x-icon">
+	<title>kioscos del sinu</title>
+	<link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Telefono</span>
+						<span class="number">+57 3106127809</span>
+					</div>
+				</div>
 
-    <header>
-        <div class="logo">
-            <img src="logo.jpeg" alt="Logo de Mi Empresa" style="width: 50%;">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#servicios"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Servicios</a>
-                </li>
-                <li><a href="#nosotros"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nosotros</a>
-                </li>
-                <li><a href="#contacto"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+				<div class="container-logo">
+					<img src="logo.jpeg" alt="Logo Kioscos Del Sinu" class="logo-image">
+					<h1 class="logo"><a href="#">Kioscos Del Sinu</a></h1>
+				</div>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1><span>Kioscos Del Sinu</span></h1>
-            <p>Somos una empresa constructora de kioscos y cabañas en vende aguja y Palma amarga.</p>
-            <a href="#servicios" class="btn">Nuestros Servicios</a>
-        </div>
-        <div class="hero-image">
-            <img src="logo.jpeg" alt="Publicidad de negocio">
-        </div>
-    </section>
+				<div class="container-user">
+					<i class="fa-solid fa-envelope"></i>
+					<div class="content-shopping-cart">
+						<span class="text">Correo:</span>
+						<span class="number">rimac.72@hotmail.com</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <section class="image-gallery">
-        <h2>Galería de Imágenes</h2>
-        <div class="image-gallery">
-            <div class="scroll-container" id="scrollContainer">
-                <!-- Las imágenes se cargarán aquí dinámicamente -->
-            </div>
-            <button class="scroll-button left" onclick="scrollLeft()">&#10094;</button>
-            <button class="scroll-button right" onclick="scrollRight()">&#10095;</button>
-        </div>
-    </section>
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<i class="fa-solid fa-bars"></i>
+				<ul class="menu">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Portafolio</a>
+						<ul class="submenu">
+							<li><a href="#">Cubiertas</a></li>
+							<li><a href="#">Pergolas y Pisos</a></li>
+						</ul>
+					</li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
 
+				<form class="search-form">
+					<input type="search" placeholder="Buscar..." />
+					<button class="btn-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+	</header>
 
-    <!-- Contenedor del video y las imágenes -->
-    <div class="publicity-container">
-        <div class="video-area">
-            <h2 class="video-title">Cumpliendo sueños</h2> <!-- Título del video -->
-            <p class="video-description">kioscos Del Sinu de la mano con grandes empresarios del sector turístico.
-                Anímate y has tus sueños realidad</p>
-            <!-- Texto descriptivo -->
-            <video autoplay muted loop>
-                <source src="https://i.imgur.com/exuA58C.mp4" type="video/mp4">
-                <!-- Reemplaza con la ruta a tu video -->
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-        <div class="images-area">
-            <img src="https://i.imgur.com/lwK2dIU.jpg" alt="Imagen Promocional 1">
-            <img src="https://i.imgur.com/ECMpvMz.jpg" alt="Imagen Promocional 2">
-        </div>
-    </div>
+	<section class="banner">
+		<div class="content-banner">
+			<p>Kioscos del sinu</p>
+			<h2>Kioscos Del <br />Sinu</h2>
+			<p>Somos una empresa constructora de kioscos y cabañas en vende aguja y Palma amarga.</p>
+			<a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank">Facebook</a>
+			<a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank">Instagram</a>
+			<a href="https://wa.me/3106127809" target="_blank">Whatsapp</a>
+		</div>
+	</section>
 
+	<main class="main-content">
 
-    <script>
-        // Array con URLs de las imágenes en Imgur
-        const imageUrls = [
-            "https://i.imgur.com/R8pAOaD.jpg",
-            "https://i.imgur.com/0SxK5sL.jpg",
-            "https://i.imgur.com/9xFFpSd.jpg",
-            "https://i.imgur.com/T7jw9Dd.jpg",
-            "https://i.imgur.com/8biWQ5W.jpg",
-            "https://i.imgur.com/oOGBLgX.jpg",
-            "https://i.imgur.com/SHM68DJ.jpg",
-            "https://i.imgur.com/3sNqQd9.jpg",
-            "https://i.imgur.com/efftNba.jpg",
-            "https://i.imgur.com/ZZl4D3e.jpg",
-            "https://i.imgur.com/nZymoco.jpg",
-            "https://i.imgur.com/LFv6Dyn.jpg",
-            "https://i.imgur.com/PYz4tW8.jpg",
-            "https://i.imgur.com/I0kmgMg.jpg",
-            "https://i.imgur.com/KL3ghPy.jpg",
-            "https://i.imgur.com/pwxHhm3.jpg",
-            "https://i.imgur.com/MOizBcd.jpg",
-            "https://i.imgur.com/4hUsiY7.jpg",
-            "https://i.imgur.com/j1qc3wb.jpg",
-            "https://i.imgur.com/CgGXsPa.jpg",
-            "https://i.imgur.com/8I1jQIp.jpg",
-            "https://i.imgur.com/Y67fIg8.jpg",
-            "https://i.imgur.com/VJvbf9k.jpg",
-            "https://i.imgur.com/ug5Ruqx.jpg",
-            // Agrega todas las URLs que necesitas
-        ];
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-house"></i>
+				<div class="feature-content">
+					<span>Cubiertas</span>
+					<p>Cubiertas</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-landmark"></i>
+				<div class="feature-content">
+					<span>Pergolas y Pisos</span>
+					<p>Pergolas y Pisos</p>
+				</div>
+			</div>
+		</section>
 
-        const scrollAmount = 300;
-        const autoScrollInterval = 3000;
-        const scrollContainer = document.getElementById('scrollContainer');
+		<section class="container top-categories">
+			<h1 class="heading-1">Galeria De Imagenes</h1>
 
-        // Cargar imágenes dinámicamente desde URLs de Imgur
-        imageUrls.forEach(url => {
-            const img = document.createElement('img');
-            img.src = url;
-            img.alt = 'Publicidad en Redes Sociales';
-            img.classList.add('zoomable'); // Agrega la clase 'zoomable' si tienes estilos de zoom
-            img.onclick = () => openModal(img); // Abre el modal al hacer clic en la imagen
-            scrollContainer.appendChild(img);
-        });
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span>Más recientes</span>
+			</div>
+			<div class="container-categories">
+				<div class="card-category category-moca">
+					<p>Cubiertas</p>
+					<a href="cubiertas.html"><span>Ver más</span></a>
+				</div>
+				<div class="card-category category-expreso">
+					<p>Pergolas y Pisos</p>
+					<a href="pergolas.html"><span>Ver más</span></a>
+				</div>
+			</div>
+		</section>
 
-        // Función para desplazamiento con botones
-        function scrollLeft() {
-            scrollContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-
-        function scrollRight() {
-            scrollContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-
-        // Desplazamiento automático
-        setInterval(() => {
-            scrollContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        }, autoScrollInterval);
-
-        // Función para abrir el modal (si tienes un modal en el HTML)
-        function openModal(img) {
-            const modal = document.getElementById('modal');
-            const modalImg = document.getElementById('modalImg');
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('modal');
-            modal.style.display = "none";
-        }
-    </script>
+		<section class="container top-products">
 
 
-    <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="service-item">
-            <img src="https://i.imgur.com/bECIvtB.jpg" alt="Marketing Digital">
-            <h3>Cubiertas</h3>
-            <p>Cubiertas.</p>
-            <a href="cubiertas.html" class="btn-service">Ver Más</a>
-        </div>
-        <div class="service-item">
-            <img src="https://i.imgur.com/1c7iR3h.jpg" alt="Publicidad Tradicional">
-            <h3>Pergolas y Pisos</h3>
-            <p>Pergolas y Pisos.</p>
-            <a href="pergolas.html" class="btn-service">Ver Más</a>
-        </div>
-    </section>
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://i.imgur.com/OL3u5Qq.jpg" alt="Cafe Irish" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://i.imgur.com/mcewVej.jpg" alt="Cafe incafe-ingles.jpg" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://i.imgur.com/0fh9648.jpg" alt="Cafe Australiano" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://i.imgur.com/dGVGKU3.jpg" alt="Cafe Helado" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section id="nosotros" class="about-us">
-        <h2>¿Quiénes Somos?</h2>
-        <p><strong>kioscos Del Sinu</strong>, es una empresa constructora de kioscos y cabañas en vende aguja y Palma
-            amarga</p>
-    </section>
+		<h1 class="heading-1">Contamos con cobertura en toda Colombia</h1>
+		<br>
+		<section class="gallery">
+			<img src="https://i.imgur.com/bECIvtB.jpg" alt="Gallery Img1" class="gallery-img-1" />
+			<img src="https://i.imgur.com/dRaoo3h.jpg" alt="Gallery Img2" class="gallery-img-2" />
+			<div class="map-overlay">
+				<img src="colombia-map-green-color-on-600nw-2143251863 (3) (1).png" alt="Mapa" class="map" />
+				<div class="map-content right">
+					<h2 class="map-title">Cobertura Nacional</h2>
+					<p class="map-description">
+						Contamos con cobertura en toda Colombia, ofreciendo servicios rápidos, confiables
+						y adaptados a tus necesidades. Estamos presentes en las principales ciudades
+						para garantizar una experiencia completa.
+					</p>
+					<a class="btn" href="https://wa.me/3106127809">Cotiza ahora</a>
+				</div>
+			</div>
+			<img src="https://i.imgur.com/RTAwQGk.jpg" alt="Gallery Img3" class="gallery-img-3" />
+			<img src="https://i.imgur.com/oOGBLgX.jpg" alt="Gallery Img4" class="gallery-img-4" />
+			<img src="https://i.imgur.com/3sNqQd9.jpg" alt="Gallery Img5" class="gallery-img-5" />
+		</section>
 
-    <footer id="contacto">
-        <h2>Contáctanos</h2>
-        <p>Teléfono: +57 3106127809</p>
-        <p>Email: rimac.72@hotmail.com</p>
-        <div class="social-media">
-            <p>Síguenos en nuestras redes sociales:</p>
-            <br>
-            <a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank"><img src="facebook.png"
-                    alt="Facebook"></a>
-            <a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank"><img src="instagram.png"
-                    alt="Instagram"></a>
-            <a href="https://wa.me/3106127809" target="_blank"><img src="whatsapp.png" alt="Instagram"></a>
-        </div>
-        <br>
-        <p>&copy; 2024<span id="currentYear"></span> Kioscos Del Sinu. Todos los derechos reservados.</p>
-    </footer>
 
-    <!-- Script para scroll suave -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 
+		<section class="container specials">
+			<h1 class="heading-1">Mas Recientes</h1>
+			<!-- Contenedor del Carrusel -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!-- Producto 1 -->
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/I6MUXC3.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- Producto 2 al 10 -->
+					<!-- Copia del Producto 1 con cambios mínimos -->
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/dWv3kbP.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- Producto 3 -->
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/uENrnV4.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+
+					<!-- Continúa copiando los productos hasta llegar al número 10 -->
+					<!-- Cambia el contenido como sea necesario (imágenes, descuentos, nombres) -->
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/RTAwQGk.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/3sNqQd9.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/oOGBLgX.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/UlBXaaj.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/ne5TdpR.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/xUXNg8e.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide card-product">
+						<div class="slider-img">
+							<img src="https://i.imgur.com/ROiPRuh.jpg" alt="Cafe Irish" />
+							<div class="button-group">
+								<span><i class="fa-regular fa-eye"></i></span>
+								<span><i class="fa-regular fa-heart"></i></span>
+								<span><i class="fa-solid fa-code-compare"></i></span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Paginación -->
+				<div class="swiper-pagination"></div>
+				<!-- Botones de Navegación -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const swiper = new Swiper('.swiper-container', {
+						loop: true, // Hace que el carrusel sea infinito
+						autoplay: {
+							delay: 3000, // Tiempo entre desplazamientos (en milisegundos)
+							disableOnInteraction: false, // Permite que el autoplay continúe incluso si el usuario interactúa
+						},
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+						slidesPerView: 3, // Ajusta el número de elementos visibles
+						spaceBetween: 10, // Espacio entre elementos
+						breakpoints: {
+							768: {
+								slidesPerView: 4,
+							},
+							480: {
+								slidesPerView: 1,
+							},
+						},
+					});
+				});
+			</script>
+		</section>
+
+		<section class="container blogs">
+			<h1 class="heading-1">Mas de 10.000 mt2 construidos en Colombia</h1>
+
+			<div class="container-blogs">
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="https://i.imgur.com/OZ0KBi8.jpg" alt="Imagen Blog 1" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Kioscos</h3>
+						<span>29 Noviembre 2022</span>
+						<p>
+							construimos Kioscos en materiales 100% ecológicos
+						</p>
+						<div class="btn-read-more">Leer más</div>
+					</div>
+				</div>
+				<div class="card-blog">
+					<div class="container-img">
+						<img src="https://i.imgur.com/oOGBLgX.jpg" alt="Imagen Blog 2" />
+						<div class="button-group-blog">
+							<span>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-link"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-blog">
+						<h3>Pergolas y pisos</h3>
+						<span>29 Noviembre 2022</span>
+						<p>
+							Elaboramos pérgolas y pisos en estructura de madera
+						</p>
+						<div class="btn-read-more">Leer más</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li>
+							Dirección: Centro, Montería, Córdoba
+						</li>
+						<li>Teléfono: +57 3106127809</li>
+						<li>EmaiL: rimac.72@hotmail.com</li>
+					</ul>
+					<div class="social-icons">
+						<span class="facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</span>
+						<span class="twitter">
+							<i class="fa-brands fa-twitter"></i>
+						</span>
+						<span class="youtube">
+							<i class="fa-brands fa-youtube"></i>
+						</span>
+						<span class="pinterest">
+							<i class="fa-brands fa-pinterest-p"></i>
+						</span>
+						<span class="instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="information">
+					<p class="title-footer">Información</p>
+					<ul>
+						<li><a href="#">Acerca de Nosotros</a></li>
+						<li><a href="#">Politicas de Privacidad</a></li>
+						<li><a href="#">Términos y condiciones</a></li>
+						<li><a href="https://wa.me/3106127809">Contactános</a></li>
+					</ul>
+				</div>
+
+				<div class="my-account">
+					<p class="title-footer"></p>
+
+				</div>
+
+				<div class="newsletter">
+					<p class="title-footer">cotiza Ahora</p>
+
+					<div class="content">
+						<p>
+							Cotiza Ahora y no te quedes con las Ganas.
+						</p>
+						<br>
+						<button><a href="https://wa.me/3106127809" target="_blank"
+								style="text-decoration: none; color: white;">
+								COTIZAR</a></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<p>&copy; 2024 Kioscos Del Sinu. Todos los derechos reservados.</p>
+
+				<div class="social-links">
+					<a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank">
+						<img src="facebook.png" alt="Facebook">
+					</a>
+					<a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank">
+						<img src="instagram.png" alt="Instagram">
+					</a>
+					<a href="https://wa.me/3106127809" target="_blank">
+						<img src="whatsapp.png" alt="WhatsApp">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

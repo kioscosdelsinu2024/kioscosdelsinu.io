@@ -1,39 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.jpeg" type="image/x-icon">
-    <title>Kioscos Del Sinu - Pergolas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="pergolas.css" />
+    <title>Pergolas y pisos</title>
 </head>
 
 <body>
-
     <header>
-        <div class="logo">
-            <img src="logo.jpeg" alt="Logo de Mi Empresa" style="width: 50%;">
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Telefono</span>
+                        <span class="number">+57 3106127809</span>
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <img src="logo.jpeg" alt="Logo Kioscos Del Sinu" class="logo-image">
+                    <h1 class="logo"><a href="#">Kioscos Del Sinu</a></h1>
+                </div>
+
+                <div class="container-user">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="content-shopping-cart">
+                        <span class="text">Correo:</span>
+                        <span class="number">rimac.72@hotmail.com</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Inicio</a>
-                </li>
-                <li><a href="#nosotros"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nosotros</a>
-                </li>
-                <li><a href="#contacto"
-                        style="font-size: 24px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Portafolio</a>
+                        <ul class="submenu">
+                            <li><a href="#">Cubiertas</a></li>
+                            <li><a href="#">Pergolas y Pisos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
     </header>
 
+    <section class="banner">
+        <div class="content-banner">
+            <p>Kioscos del sinu</p>
+            <h2>Pergolas y Pisos</h2>
+            <p>Somos una empresa constructora de kioscos y cabañas en vende aguja y Palma amarga.</p>
+            <a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank">Instagram</a>
+            <a href="https://wa.me/3106127809" target="_blank">Whatsapp</a>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
     <section>
-        <h1
-            style="font-size: 48px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;">
-            Pergolas</h1>
         <div class="image-gallery">
             <img src="https://i.imgur.com/R8pAOaD.jpg" alt="Imagen 1" class="zoomable" onclick="openModal(this)">
             <img src="https://i.imgur.com/0SxK5sL.jpg" alt="Imagen 1" class="zoomable" onclick="openModal(this)">
@@ -157,57 +202,114 @@
         </div>
     </section>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="img01">
-    </div>
-
-    <section id="nosotros" class="about-us">
-        <h2>¿Quiénes Somos?</h2>
-        <p><strong>kioscos Del Sinu</strong>, es una empresa constructora de kioscos y cabañas en vende aguja y Palma
-            amarga</p>
-    </section>
-
-    <footer id="contacto">
-        <h2>Contáctanos</h2>
-        <p>Teléfono: +57 3106127809</p>
-        <p>Email: rimac.72@hotmail.com</p>
-        <div class="social-media">
-            <p>Síguenos en nuestras redes sociales:</p>
-            <br>
-            <a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank"><img src="facebook.png"
-                    alt="Facebook"></a>
-            <a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank"><img src="instagram.png"
-                    alt="Instagram"></a>
-            <a href="https://wa.me/3106127809" target="_blank"><img src="whatsapp.png" alt="Instagram"></a>
-        </div>
-        <br>
-        <p>&copy; 2024<span id="currentYear"></span> Kioscos Del Sinu. Todos los derechos reservados.</p>
-    </footer>
-
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none"; // Asegúrate de que el modal esté oculto
+            console.log("Modal oculto al cargar la página");
+        });
+
         function openModal(img) {
+            if (!img || !img.src) return; // Validación extra
+            console.log("Abriendo modal con imagen:", img.src);
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("img01");
-            modal.style.display = "flex"; // Mostrar el modal
-            modalImg.src = img.src; // Establecer la imagen del modal
+            modal.style.display = "flex";
+            modalImg.src = img.src;
         }
 
         function closeModal() {
+            console.log("Cerrando modal");
             var modal = document.getElementById("myModal");
-            modal.style.display = "none"; // Ocultar el modal
+            modal.style.display = "none";
         }
 
-        // Cerrar el modal cuando se hace clic fuera de la imagen
         window.onclick = function (event) {
             var modal = document.getElementById("myModal");
             if (event.target == modal) {
-                closeModal(); // Ocultar el modal
+                closeModal();
             }
-        }
+        };
     </script>
 
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>
+                            Dirección: Centro, Montería, Córdoba
+                        </li>
+                        <li>Teléfono: +57 3106127809</li>
+                        <li>EmaiL: rimac.72@hotmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+                        <span class="pinterest">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="https://wa.me/3106127809">Contactános</a></li>
+                    </ul>
+                </div>
+
+                <div class="my-account">
+                    <p class="title-footer"></p>
+
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">cotiza Ahora</p>
+
+                    <div class="content">
+                        <p>
+                            Cotiza Ahora y no te quedes con las Ganas.
+                        </p>
+                        <br>
+                        <button><a href="https://wa.me/3106127809" target="_blank"
+                                style="text-decoration: none; color: white;">
+                                COTIZAR</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Kioscos Del Sinu. Todos los derechos reservados.</p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/richard.alean/?locale=es_LA" target="_blank">
+                        <img src="facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/kioscosdelsinu_/" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/3106127809" target="_blank">
+                        <img src="whatsapp.png" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
